@@ -1,0 +1,4 @@
+function loadHomePage(){
+}
+
+export {loadHomePage};

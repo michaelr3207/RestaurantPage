@@ -2,6 +2,7 @@
   "name": "restaurantpage",
   "version": "1.0.0",
   "description": "Simple dynamic restaurant page app",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
@@ -9,7 +10,20 @@
   "author": "Michael Robinson",
   "license": "ISC",
   "devDependencies": {
+    "css-loader": "^6.9.0",
+    "csv-loader": "^3.0.5",
+    "json5": "^2.2.3",
+    "lodash": "^4.17.21",
+    "style-loader": "^3.3.4",
+    "toml": "^3.0.0",
     "webpack": "^5.89.0",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "xml-loader": "^1.2.1",
+    "yamljs": "^0.3.0"
+  },
+  "dependencies": {
+    "toml": "^3.0.0",
+    "yamljs": "^0.3.0",
+    "html-webpack-plugin": "^5.6.0"
   }
 }
