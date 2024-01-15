@@ -1,5 +1,5 @@
-import {loadHomePage} from './loadHomePage'
 import './style.css';
+import {loadHomePage} from './loadHomePage'
 import _ from "lodash";
 
 
@@ -28,6 +28,7 @@ import _ from "lodash";
 // }
 
 function component() {
+ loadHomePage();
 //     const contentDiv = document.getElementById('content');
 //     const headerElement = document.createElement('div');
 //     headerElement.id = 'headerDiv'; headerElement.classList.add('headerDiv');
