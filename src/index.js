@@ -1,11 +1,10 @@
 import './style.css';
-import {loadHomePage} from './loadHomePage'
+import {loadInitialPage} from './loadHomePage'
 import _ from "lodash";
 
 
 function component() {
- loadHomePage();
-
+       loadInitialPage()
  }
 
 component();
