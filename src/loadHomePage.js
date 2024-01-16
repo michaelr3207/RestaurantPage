@@ -2,6 +2,9 @@ import CoffeeImage from './coffeeCUp2.jpeg'
 import {clearMainBodyContent, createWebpage, createHeaderTitle, addButtonsToHeader, createMainBodyDiv,
     createButtonBoxDiv, createOpeningTimeMsg} from './util'
 import {loadHomePage} from "./homePage";
+import {loadMenuPage} from './menuPage';
+
+
 
 function loadInitialPage(){
     createWebpage();
@@ -12,11 +15,13 @@ function addEventListenersToNavButtons(){
     const homeBtn = document.getElementById('homeBtn');
     menuBtn.addEventListener("click", function (){
         clearMainBodyContent();
+        loadMenuPage();
+
     })
     homeBtn.addEventListener("click", function (){
-        console.log('bru');
+        clearMainBodyContent()
         loadHomePage();
     })
 }
 
-export {loadInitialPage};
+export {loadInitialPage, loadHomePage};

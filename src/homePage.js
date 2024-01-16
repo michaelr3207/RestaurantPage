@@ -20,7 +20,7 @@ function createIntroMessage(mainBodyElement){
 function createMainBodyMessage(mainBodyElement){
     const mainBodyMessageDiv = document.createElement('div');
     mainBodyMessageDiv.classList.add('mainBodyMessageDiv');
-    mainBodyMessageDiv.innerHTML = 'Welcome to our coffee shop website please have a loook around, we have a' +
+    mainBodyMessageDiv.innerHTML = 'Welcome to our coffee shop website please have a look around, we have a' +
         'wide selection on offer!';
     mainBodyMessageDiv.appendChild(createSmallMessage());
     mainBodyElement.appendChild(mainBodyMessageDiv);

@@ -1,5 +1,3 @@
-import {loadHomePage} from "./loadHomePage";
-
 
 function clearMainBodyContent(){
     const mainBodyContent = document.getElementById('mainBody');
@@ -46,7 +44,7 @@ function createMainBodyDiv(){
     const introMessage = document.createElement('div');
     mainBodyElement.id = 'mainBody';
     introMessage.classList.add('introMsgDiv');
-    introMessage.innerHTML = 'The Best Coffee I have Ever Had...';
+    introMessage.innerHTML = 'The <span class="underlineSpan">Best</span> Coffee I have Ever Had...';
     smallMessage.innerHTML = 'Please be aware of waiting times during holidays';
     smallMessage.classList.add('smallMsg');
     mainBodyElement.appendChild(introMessage);
@@ -78,36 +76,10 @@ function createButtonBoxDiv(){
 
 function createOpeningTimeMsg(){
     const openingTimesMessageElement = document.createElement('div');
-    openingTimesMessageElement.innerHTML = 'Open 9 - 5 Mon to Friday!';
+    openingTimesMessageElement.innerHTML = 'Open 9 - 5 <span class="underlineSpan">Mon to Friday!</span>';
     openingTimesMessageElement.classList.add('openingTimesDiv');
     return openingTimesMessageElement;
 }
-
-// function createIntroMessage(mainBodyElement){
-//     const introMessage = document.createElement('div');
-//     introMessage.innerHTML = 'The Best Coffee I have Ever Had...';
-//     introMessage.classList.add('introMsgDiv');
-//     mainBodyElement.appendChild(introMessage);
-// }
-//
-//
-// function createMainBodyMessage(mainBodyElement){
-//     const mainBodyMessageDiv = document.createElement('div');
-//     mainBodyMessageDiv.classList.add('mainBodyMessageDiv');
-//     mainBodyMessageDiv.innerHTML = 'Welcome to our coffee shop website please have a loook around, we have a' +
-//         'wide selection on offer!';
-//     mainBodyMessageDiv.appendChild(createSmallMessage());
-//     mainBodyElement.appendChild(mainBodyMessageDiv);
-// }
-//
-//
-// function createSmallMessage(){
-//     const smallMessage = document.createElement('div');
-//     smallMessage.innerHTML = 'Please be aware of waiting times during holidays';
-//     smallMessage.classList.add('smallMsg');
-//     return smallMessage;
-// }
-
 
 
 export {clearMainBodyContent, createWebpage, createHeaderTitle, addButtonsToHeader, createMainBodyDiv,

@@ -81,8 +81,50 @@ html, body {
     color: #e5e5e5;
 }
 
+.menuTitleDiv{
+    color: #dcd6d6;
+    font-size: 50px;
+    /*border: 2px solid red;*/
+    margin: 50px;
+    width: 20%;
+    margin-left: 180px;
+    text-align: center;
+    font-style: italic;
+
+}
+
+
+.menuItemDiv{
+    border-top: 1px solid ghostwhite;
+    border-bottom: 1px solid ghostwhite;
+}
+
+.menuItemCostDiv{
+    border-top: 0.5px solid ghostwhite;
+    border-bottom: 1px solid ghostwhite;
+}
+
+
+.menuDiv{
+    /*border: 2px solid yellow;*/
+    width: 40%;
+    height: 70%;
+    margin-left: 40px;
+    color: #cec7be;
+    font-size: 35px;
+    font-style: italic;
+    font-weight: lighter;
+    font-family: Verdana;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+}
+
+.underlineSpan{
+    text-decoration: underline;
+}
+
 .introMsgDiv{
-    color: #d37a0e;
+    color: #f89a28;
     font-family: Verdana;
     font-size: 55px;
     /*border: 2px solid red;*/
