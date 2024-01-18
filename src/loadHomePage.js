@@ -3,6 +3,7 @@ import {clearMainBodyContent, createWebpage, createHeaderTitle, addButtonsToHead
     createButtonBoxDiv, createOpeningTimeMsg} from './util'
 import {loadHomePage} from "./homePage";
 import {loadMenuPage} from './menuPage';
+import {addEventListenersToNavButtons} from "./index";
 
 
 
@@ -10,18 +11,6 @@ function loadInitialPage(){
     createWebpage();
     addEventListenersToNavButtons();
 }
-function addEventListenersToNavButtons(){
-    const menuBtn = document.getElementById('menuBtn');
-    const homeBtn = document.getElementById('homeBtn');
-    menuBtn.addEventListener("click", function (){
-        clearMainBodyContent();
-        loadMenuPage();
 
-    })
-    homeBtn.addEventListener("click", function (){
-        clearMainBodyContent()
-        loadHomePage();
-    })
-}
 
 export {loadInitialPage, loadHomePage};

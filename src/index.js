@@ -1,6 +1,8 @@
 import './style.css';
-import {loadInitialPage} from './loadHomePage'
+import {loadHomePage, loadInitialPage} from './loadHomePage'
 import _ from "lodash";
+import {clearMainBodyContent} from "./util";
+import {loadMenuPage} from "./menuPage";
 
 
 function component() {
@@ -8,3 +10,20 @@ function component() {
  }
 
 component();
+
+
+function addEventListenersToNavButtons(){
+    const menuBtn = document.getElementById('menuBtn');
+    const homeBtn = document.getElementById('homeBtn');
+    menuBtn.addEventListener("click", function (){
+        clearMainBodyContent();
+        loadMenuPage();
+
+    })
+    homeBtn.addEventListener("click", function (){
+        clearMainBodyContent()
+        loadHomePage();
+    })
+}
+
+export {addEventListenersToNavButtons};

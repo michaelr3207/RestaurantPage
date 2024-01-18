@@ -13,16 +13,16 @@ html, body {
     /*border: 2px solid blue;*/
     width: 30%;
     height: 10%;
-    margin-top: -50px;
+    margin-top: 2%;
 }
 
 .btnBoxDiv button{
     width: 35%;
     height: 70%;
     border: solid white;
-    margin-left: 60px;
+    margin-left: 10%;
     background: #885006;
-    font-size: 25px;
+    font-size: 120%;
     color: whitesmoke;
     font-weight: bold;
     font-family: Verdana;
@@ -40,9 +40,9 @@ html, body {
     /*border: 2px solid palevioletred;*/
     width: 30%;
     text-align: center;
-    font-size: 47px;
+    font-size: 280%;
     font-family: "Times New Roman", Times, serif;
-    margin-top: 30px;
+    margin-top: 2%;
     color: white;
     font-weight: lighter;
     font-style: italic;
@@ -71,23 +71,24 @@ html, body {
 
 .headerTitleDiv{
     /*border: 2px solid green;*/
-    width: 27%;
+    width: 39%;
     height: 55%;
-    margin-left: 50px;
-    margin-top: 60px;
+    margin-left: 5%;
+    margin-top: 3%;
     padding-left: 30px;
-    font-size: 100px;
+    font-size: 550%;
     font-weight: bold;
     color: #e5e5e5;
 }
 
 .menuTitleDiv{
     color: #dcd6d6;
-    font-size: 50px;
+    font-size: 250%;
     /*border: 2px solid red;*/
-    margin: 50px;
+    margin-top: 2%;
+    margin-bottom: 2%;
     width: 20%;
-    margin-left: 180px;
+    margin-left: 9%;
     text-align: center;
     font-style: italic;
 
@@ -111,7 +112,7 @@ html, body {
     height: 70%;
     margin-left: 40px;
     color: #cec7be;
-    font-size: 35px;
+    font-size: 220%;
     font-style: italic;
     font-weight: lighter;
     font-family: Verdana;
@@ -126,18 +127,18 @@ html, body {
 .introMsgDiv{
     color: #f89a28;
     font-family: Verdana;
-    font-size: 55px;
+    font-size: 330%;
     /*border: 2px solid red;*/
     width: 50%;
-    margin-top: 80px;
-    margin-left: 25px;
+    margin-top: 4%;
+    margin-left: 1.5%;
     font-style: italic;
     font-weight: lighter;
 }
 
 .headerButtonDiv{
-    margin-left: 600px;
-    margin-top: 200px;
+    margin-left: 35%;
+    margin-top: 10%;
     /*border: 2px solid turquoise;*/
     width: 40%;
     height: 20%;
@@ -150,7 +151,7 @@ html, body {
     /*border: 1px solid #1e1e1e;*/
     width: 20%;
     color: whitesmoke;
-    font-size: 40px;
+    font-size: 240%;
     border: none;
 }
 
@@ -166,20 +167,40 @@ html, body {
 
 .mainBodyMessageDiv{
     color: #dcd6d6;
-    font-size: 55px;
+    font-size: 355%;
     width: 40%;
-    height: 50%;
+    height: 40%;
     font-family: Verdana;
-    margin-left: 20px;
+    margin-left: 2%;
     /*border: 2px solid red;*/
     /*text-align: center;*/
-    margin-top: 120px;
+    margin-top: 6%;
     font-weight: lighter;
 }
 
 .smallMsg{
-    margin-top: 40px;
-    font-size: 30px;
+    margin-top: 6%;
+    font-size: 50%;
     text-decoration: underline;
     color: #807f7f;
+}
+
+@media (width < 1500px){
+    .headerDiv{
+        display: block;
+        background: #f89a28;
+        border: 2px solid green;
+        font-size: 10px;
+    }
+    .headerTitleDiv{
+        font-size: 90%;
+    }
+
+    .mainBodyMessageDiv{
+        font-size: 200%;
+    }
+
+    .introMsgDiv{
+        font-size: 150%;
+    }
 }
