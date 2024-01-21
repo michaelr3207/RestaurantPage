@@ -10,7 +10,7 @@ function loadHomePage(){
 }
 
 function createIntroMessage(mainBodyElement){
-    const introMessage = createDiv('introMsgDiv', 'The Best Coffee I have Ever Had...' )
+    const introMessage = createDiv('introMsgDiv',  'The <span class="underlineSpan">Best</span> Coffee I have Ever Had...' )
     mainBodyElement.appendChild(introMessage);
 }
 
