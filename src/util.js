@@ -1,6 +1,7 @@
 
 function clearMainBodyContent(){
     const mainBodyContent = document.getElementById('mainBody');
+    mainBodyContent.style.background = '';
     mainBodyContent.innerHTML = '';
 }
 
