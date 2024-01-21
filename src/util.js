@@ -6,6 +6,8 @@ function clearMainBodyContent(){
 }
 
 
+// first comment of new branhc
+
 function createWebpage() {
     const headerElement = document.createElement('div');
     headerElement.classList.add('headerDiv'); headerElement.id = 'header';
