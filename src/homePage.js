@@ -1,4 +1,4 @@
-import {createButtonBoxDiv, createOpeningTimeMsg} from "./util";
+import {createButtonBoxDiv, createDiv, createOpeningTimeMsg} from "./util";
 
 
 function loadHomePage(){
@@ -10,29 +10,23 @@ function loadHomePage(){
 }
 
 function createIntroMessage(mainBodyElement){
-    const introMessage = document.createElement('div');
-    introMessage.innerHTML = 'The Best Coffee I have Ever Had...';
-    introMessage.classList.add('introMsgDiv');
+    const introMessage = createDiv('introMsgDiv',  'The <span class="underlineSpan">Best</span> Coffee I have Ever Had...' )
     mainBodyElement.appendChild(introMessage);
 }
 
 
 function createMainBodyMessage(mainBodyElement){
-    const mainBodyMessageDiv = document.createElement('div');
-    mainBodyMessageDiv.classList.add('mainBodyMessageDiv');
-    mainBodyMessageDiv.innerHTML = 'Welcome to our coffee shop website please have a look around, we have a' +
-        'wide selection on offer!';
+    const mainBodyMessageDiv = createDiv('mainBodyMessageDiv',
+        'Welcome to our coffee shop website please have a look around, we have a wide selection on offer!')
     mainBodyMessageDiv.appendChild(createSmallMessage());
     mainBodyElement.appendChild(mainBodyMessageDiv);
 }
 
 
 function createSmallMessage(){
-    const smallMessage = document.createElement('div');
-    smallMessage.innerHTML = 'Please be aware of waiting times during holidays';
-    smallMessage.classList.add('smallMsg');
-    return smallMessage;
+    return createDiv('smallMsg',
+        'Please be aware of waiting times during holidays');
 }
 
 
-export {loadHomePage};
+export {loadHomePage, createIntroMessage, createMainBodyMessage};
