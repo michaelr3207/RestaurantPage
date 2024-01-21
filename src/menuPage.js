@@ -2,7 +2,6 @@
 
 
 function loadMenuPage(){
-    console.log('work');
     const mainBodyElement = document.getElementById('mainBody');
     createMenuTitle(mainBodyElement);
     createMenu(mainBodyElement);
@@ -10,7 +9,6 @@ function loadMenuPage(){
 
 
 function createMenuTitle(mainBodyElement){
-    console.log('workdddddddd');
     const menuTitleElement = document.createElement('div');
     menuTitleElement.classList.add('menuTitleDiv');
     menuTitleElement.innerHTML = 'Coffee Menu';
@@ -35,6 +33,5 @@ function createMenu(mainBodyElement){
     }
     mainBodyElement.appendChild(menuElement);
 }
-
 
 export {loadMenuPage, createMenuTitle};

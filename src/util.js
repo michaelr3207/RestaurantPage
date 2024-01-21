@@ -1,3 +1,4 @@
+import {createIntroMessage, createMainBodyMessage} from "./homePage";
 
 function clearMainBodyContent(){
     const mainBodyContent = document.getElementById('mainBody');
@@ -5,24 +6,16 @@ function clearMainBodyContent(){
     mainBodyContent.innerHTML = '';
 }
 
-
-// first comment of new branhc
+// this is optimise branch
 
 function createWebpage() {
-    const headerElement = document.createElement('div');
-    headerElement.classList.add('headerDiv'); headerElement.id = 'header';
+    const headerElement = createDiv('headerDiv', '')
+    headerElement.id = 'header';
     const contentDiv = document.getElementById('contentBox');
-    headerElement.appendChild(createHeaderTitle());
+    headerElement.appendChild(createDiv('headerTitleDiv', 'Coffee Shop' ));
     headerElement.appendChild(addButtonsToHeader());
     contentDiv.appendChild(headerElement);
     createMainBodyDiv();
-}
-
-function createHeaderTitle(){
-    const headerTitleDiv = document.createElement('div');
-    headerTitleDiv.id = 'headerTitle'; headerTitleDiv.classList.add('headerTitleDiv');
-    headerTitleDiv.innerHTML = 'Coffee Shop'
-    return headerTitleDiv;
 }
 
 function addButtonsToHeader(){
@@ -41,22 +34,10 @@ function addButtonsToHeader(){
 }
 
 function createMainBodyDiv(){
-    const mainBodyElement = document.createElement('div');
-    const mainBodyMessageDiv = document.createElement('div');
-    const smallMessage = document.createElement('div');
-    const introMessage = document.createElement('div');
+    const mainBodyElement = createDiv('mainBodyDiv');
     mainBodyElement.id = 'mainBody';
-    introMessage.classList.add('introMsgDiv');
-    introMessage.innerHTML = 'The <span class="underlineSpan">Best</span> Coffee I have Ever Had...';
-    smallMessage.innerHTML = 'Please be aware of waiting times during holidays';
-    smallMessage.classList.add('smallMsg');
-    mainBodyElement.appendChild(introMessage);
-    mainBodyElement.classList.add('mainBodyDiv');
-    mainBodyMessageDiv.classList.add('mainBodyMessageDiv');
-    mainBodyMessageDiv.innerHTML = 'Welcome to our coffee shop website please have a loook around, we have a' +
-        'wide selection on offer!';
-    mainBodyMessageDiv.appendChild(smallMessage);
-    mainBodyElement.appendChild(mainBodyMessageDiv);
+    createIntroMessage(mainBodyElement);
+    createMainBodyMessage(mainBodyElement);
     mainBodyElement.appendChild(createButtonBoxDiv());
     mainBodyElement.appendChild(createOpeningTimeMsg());
     const contentDiv = document.getElementById('contentBox');
@@ -64,8 +45,7 @@ function createMainBodyDiv(){
 }
 
 function createButtonBoxDiv(){
-    const btnBoxElement = document.createElement('div');
-    btnBoxElement.classList.add('btnBoxDiv');
+    const btnBoxElement = createDiv('btnBoxDiv', '');
     const orderBtn = document.createElement('button');
     const learnMoreBtn = document.createElement('button');
     learnMoreBtn.id  = 'learnMoreBtn';
@@ -78,12 +58,17 @@ function createButtonBoxDiv(){
 
 
 function createOpeningTimeMsg(){
-    const openingTimesMessageElement = document.createElement('div');
-    openingTimesMessageElement.innerHTML = 'Open 9 - 5 <span class="underlineSpan">Mon to Friday!</span>';
-    openingTimesMessageElement.classList.add('openingTimesDiv');
-    return openingTimesMessageElement;
+    return createDiv('openingTimesDiv', 'Open 9 - 5 <span class="underlineSpan">Mon to Friday!</span>');
+}
+
+function createDiv(classname, innerHtml){
+    const divElement = document.createElement('div');
+    if(innerHtml !== '')
+        divElement.innerHTML = innerHtml;
+    divElement.classList.add(classname);
+    return divElement;
 }
 
 
-export {clearMainBodyContent, createWebpage, createHeaderTitle, addButtonsToHeader, createMainBodyDiv,
-        createButtonBoxDiv, createOpeningTimeMsg};
+export {clearMainBodyContent, createWebpage, addButtonsToHeader, createMainBodyDiv,
+        createButtonBoxDiv, createOpeningTimeMsg, createDiv};

@@ -1,12 +1,12 @@
 import CoffeeImage from './darkCoffee.jpg'
+import {createDiv} from "./util";
 
 function loadContactPage(){
     const contactPageMainBodyElement = createDiv('contactPageMain');
     const mainBodyElement = document.getElementById('mainBody');
     mainBodyElement.style.background = 'black';
     const contactDetailsElement = createDiv('contactDetailsDiv');
-    const contactDetailsTitleElement = createDiv('contactDetailsTitleDiv');
-    contactDetailsTitleElement.innerHTML = 'Get In Contact!';
+    const contactDetailsTitleElement = createDiv('contactDetailsTitleDiv', 'Get In Contact!');
     const formContactElement = createDiv('formContactDiv');
     createFormContactElement(formContactElement);
     contactDetailsElement.appendChild(contactDetailsTitleElement);
@@ -16,11 +16,7 @@ function loadContactPage(){
     mainBodyElement.appendChild(contactPageMainBodyElement);
 }
 
-function createDiv(classname){
-    const divElement = document.createElement('div');
-    divElement.classList.add(classname);
-    return divElement;
-}
+
 
 function createImageDiv(){
     const coffeeImageElement = createDiv('coffeeImgDiv');
