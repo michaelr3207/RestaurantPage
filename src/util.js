@@ -34,7 +34,7 @@ function addButtonsToHeader(){
 }
 
 function createMainBodyDiv(){
-    const mainBodyElement = createDiv('mainBodyDiv');
+    const mainBodyElement = createDiv('mainBodyDiv', '');
     mainBodyElement.id = 'mainBody';
     createIntroMessage(mainBodyElement);
     createMainBodyMessage(mainBodyElement);
